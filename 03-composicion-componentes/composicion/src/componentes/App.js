@@ -1,14 +1,18 @@
 
 import UserCard from "./usersCard"
-// import users from "../data/user"
+import users from "../data/user"
 import post from "../data/post"
 
 const App = () => {
     return (
 
         <div className="container">
-           {post.map((post)=>  <UserCard key={post} post={post} />)} 
-           
+            {post.map((post) => {
+                const user = users.find((user) => post.userId === user.id)
+                return <UserCard key={post.id} post={post}
+                    user={user} />
+            })}
+
         </div>
     )
 }

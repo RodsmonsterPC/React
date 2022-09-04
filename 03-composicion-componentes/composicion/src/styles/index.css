@@ -1,32 +1,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
 
 .container {
-    display: grid;
+    
     grid-template-columns: 200px 200px 200px;
     grid-gap: 50px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
+    width: auto;
     background-color: #f5f5f5;
     font-family: 'Baloo Paaji 2', cursive;
 }
 
 .card {
-    background-color: #222831;
+    background-color: white;
     border-radius: 5px;
+    position: relative;
+    width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
-    box-shadow: 0 10px 50px rgb(13, 55, 190);
+    color: black;
+    margin: 10px;
+    
+    
 }
 
-.card-name {
+.card-title {
     margin-top: 15px;
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    padding-left: 30px;
+    padding-right: 50px;
 }
 
-.card-label {
+.card-body {
     margin-top: 15px;
-    font-size: 1 rem;
+    font-size: 1rem;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+
+.card-name{
+    margin-top: 15px;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 50px;
+    position: relative;
+    right: 80px;
+    top: 10px;
+}
+
+.card-email{
+    margin-top: 15px;
+    font-size: 15px;
+    padding-left: 30px;
+    padding-right: 50px;
+    position: relative;
+    right: 90px;
+    top: -5px;
+}
+
+.logo{
+    position: relative;
+    left: -200px;
+    bottom: 55px;
+   
 }

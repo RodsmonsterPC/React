@@ -2,7 +2,7 @@ const Title = (props) => {
 
     return (
 
-        <div className="card-name">{props.text}</div>
+        <div className="card-title">{props.text}</div>
 
 
     );
