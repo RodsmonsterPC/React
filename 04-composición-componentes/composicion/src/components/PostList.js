@@ -2,13 +2,16 @@
 import { results } from "./data/CardRick"
 
 import CardInfo from "./CardInfo"
+import styles from "./PostList.scss"
+
 
 const PostList = () => {
     return (
         <div>
-            <h1>The Rick and Morty API</h1>
+            <h1 className={styles.h1}>The Rick and Morty API</h1>
             <div>
             {results.map((info)=>{
+                
                 return(
                     <CardInfo 
                     key={info.id} 
