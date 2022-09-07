@@ -1,0 +1,24 @@
+div{
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(60, 62, 68);
+    width: 600px;
+    height: 200px;
+}
+
+label{
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    color: azure;
+}
+
+.operatorButtons{
+    width: 90px;
+    height: 50px;
+    border-radius: 15%;
+    display: flex;
+    flex-direction: row;
+    
+    
+}
