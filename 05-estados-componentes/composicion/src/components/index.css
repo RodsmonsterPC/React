@@ -1,7 +1,7 @@
 div{
     display: flex;
     flex-direction: column;
-    background-color:rgb(60, 62, 68);
+    background-color:aqua;
     width: 600px;
     height: 200px;
 }

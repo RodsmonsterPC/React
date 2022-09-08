@@ -1,4 +1,4 @@
-import Operator from "./components/Operator";
+// import Operator from "./components/Operator";
 import Form from "./components/Form/form";
 function App() {
   return (
