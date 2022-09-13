@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CardCharacter from "./CardRick/CardCharacter";
+import CardCharacter from "../CardRick/CardCharacter";
 import styles from "./CardList.module.scss";
 
 const CardList = ({ data }) => {

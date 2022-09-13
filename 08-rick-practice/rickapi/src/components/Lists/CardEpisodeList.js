@@ -1,5 +1,5 @@
-import CardEpisode from "./CardEpisode/cardEpisode";
-import styles from "./CardEpisode.module.scss";
+import CardEpisode from "../CardEpisode/cardEpisode";
+import styles from "../Lists/CardList.module.scss";
 
 const EpisodeList = ({ data }) => {
   return (
@@ -7,12 +7,13 @@ const EpisodeList = ({ data }) => {
       <h1 className={styles.h1}>The Rick and Morty API</h1>
       <div>
         {data.map((info) => {
+          console.log(info);
           return (
             <CardEpisode
               key={info.id}
-              title={info.title}
-              subTitle={info.subTitle}
-              nameEpisode={info.nameEpisode}
+              name={info.name}
+              air_date={info.air_date}
+              episode={info.episode}
             />
           );
         })}

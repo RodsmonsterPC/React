@@ -1,3 +1,4 @@
+import styles from "./CardEpisode.module.scss";
 const CardEpisode = (props) => {
   const title = props.name;
   const subTitle = props.air_date;
