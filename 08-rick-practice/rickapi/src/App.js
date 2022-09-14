@@ -3,6 +3,7 @@ import CharacterPage from "./pages/CharacterPages";
 import EpisodePage from "./pages/EpisodePages";
 import LocationPage from "./pages/LocationPage";
 import Navbar from "./components/Navbar/Navbar";
+import DetailCard from "./pages/DetailCard";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <div>
         <Navbar />
         <Routes>
-          {/* <Route path="/" element={<HomePage />} /> */}
+          <Route path="character/:characterId" element={<DetailCard />} />
           <Route path="character" element={<CharacterPage />} />
           <Route path="episode" element={<EpisodePage />} />
           <Route path="location" element={<LocationPage />} />

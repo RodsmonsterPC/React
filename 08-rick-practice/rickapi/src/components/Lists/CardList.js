@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import CardCharacter from "../CardRick/CardCharacter";
 import styles from "./CardList.module.scss";
 
@@ -25,15 +26,17 @@ const CardList = ({ data }) => {
         {data.map((info) => {
           if (info.status === status || status === "all") {
             return (
-              <CardCharacter
-                key={info.id}
-                name={info.name}
-                status={info.status}
-                species={info.species}
-                origin={info.origin.name}
-                location={info.location.name}
-                image={info.image}
-              />
+              <Link className={styles.link} to={`/character/${info.id}`}>
+                <CardCharacter
+                  key={info.id}
+                  name={info.name}
+                  status={info.status}
+                  species={info.species}
+                  origin={info.origin.name}
+                  location={info.location.name}
+                  image={info.image}
+                />
+              </Link>
             );
           }
           return null;
