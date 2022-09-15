@@ -7,7 +7,6 @@ const EpisodeList = ({ data }) => {
       <h1 className={styles.h1}>The Rick and Morty API</h1>
       <div>
         {data.map((info) => {
-          console.log(info);
           return (
             <CardEpisode
               key={info.id}

@@ -2,9 +2,12 @@ import styles from "./cardRick.module.scss";
 import statusOk from "../images/status.png";
 import statusDeath from "../images/status_busy.png";
 import statusUnknown from "../images/status_offline.png";
+import { useContext } from "react";
+import LikeContext from "../context/LikeContext";
 
 const CardRick = (props) => {
   const name = props.name;
+  const id = props.id;
   const status = props.status;
   const species = props.species;
   const origin = props.origin;
@@ -16,6 +19,8 @@ const CardRick = (props) => {
     unknown: statusUnknown,
   };
 
+  const { switchLike, getLike } = useContext(LikeContext);
+  console.log("hola", getLike(id));
   return (
     <div className={styles.cardContainer}>
       <div>

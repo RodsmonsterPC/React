@@ -4,11 +4,12 @@ import EpisodePage from "./pages/EpisodePages";
 import LocationPage from "./pages/LocationPage";
 import Navbar from "./components/Navbar/Navbar";
 import DetailCard from "./pages/DetailCard";
+import { LikeContextProvider } from "./components/context/LikeContext";
 
 function App() {
   return (
     <div className="App">
-      <div>
+      <LikeContextProvider>
         <Navbar />
         <Routes>
           <Route path="character/:characterId" element={<DetailCard />} />
@@ -17,7 +18,7 @@ function App() {
           <Route path="location" element={<LocationPage />} />
           <Route></Route>
         </Routes>
-      </div>
+      </LikeContextProvider>
     </div>
   );
 }

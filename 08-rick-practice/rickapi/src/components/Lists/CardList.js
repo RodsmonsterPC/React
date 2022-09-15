@@ -26,10 +26,14 @@ const CardList = ({ data }) => {
         {data.map((info) => {
           if (info.status === status || status === "all") {
             return (
-              <Link className={styles.link} to={`/character/${info.id}`}>
+              <Link
+                key={info.id}
+                className={styles.link}
+                to={`/character/${info.id}`}
+              >
                 <CardCharacter
-                  key={info.id}
                   name={info.name}
+                  id={info.id}
                   status={info.status}
                   species={info.species}
                   origin={info.origin.name}
