@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import CardCharacter from "../CardRick/CardCharacter";
+
 import styles from "./CardList.module.scss";
 
 const CardList = ({ data }) => {
@@ -32,6 +33,7 @@ const CardList = ({ data }) => {
                 to={`/character/${info.id}`}
               >
                 <CardCharacter
+                  key={info.id}
                   name={info.name}
                   id={info.id}
                   status={info.status}

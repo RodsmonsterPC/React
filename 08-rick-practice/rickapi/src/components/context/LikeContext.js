@@ -5,13 +5,21 @@ const LikeContext = React.createContext({ name: null });
 export const LikeContextProvider = ({ children }) => {
   const [likes, setLikes] = useState({});
 
-  const switchLike = () => {};
+  const switchLike = (id) => {
+    if (likes[id]) {
+      const newLikes = { ...likes };
+      newLikes[id] = undefined;
+      setLikes(newLikes);
+    } else {
+      setLikes({ ...likes, [id]: true });
+    }
+  };
 
-  const getLike = () => {
-    return true;
+  const getLike = (id) => {
+    return likes[id];
   };
   return (
-    <LikeContext.Provider value={{ switchLike, getLike }}>
+    <LikeContext.Provider value={{ switchLike, getLike, likes }}>
       {children}
     </LikeContext.Provider>
   );

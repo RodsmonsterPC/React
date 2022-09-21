@@ -19,8 +19,8 @@ const CardRick = (props) => {
     unknown: statusUnknown,
   };
 
-  const { switchLike, getLike } = useContext(LikeContext);
-  console.log("hola", getLike(id));
+  const { switchLike, getLike, likes } = useContext(LikeContext);
+  const liked = getLike(id);
   return (
     <div className={styles.cardContainer}>
       <div>
@@ -48,7 +48,19 @@ const CardRick = (props) => {
           <span className={styles.colorSpan}>First seen in:</span>
           <small>{origin}</small>
         </div>
+        <div>{liked && "<3"}</div>
       </section>
+
+      <div>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            switchLike(id);
+          }}
+        >
+          Like
+        </button>
+      </div>
     </div>
   );
 };
