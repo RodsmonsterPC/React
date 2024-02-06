@@ -1,5 +1,5 @@
 // import Operator from "./components/Operator";
-import Form from "./components/Form/form";
+import Form from "./components/Form/Form";
 function App() {
   return (
     <div>

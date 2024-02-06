@@ -16,7 +16,7 @@ function App() {
           <Route path="character" element={<CharacterPage />} />
           <Route path="episode" element={<EpisodePage />} />
           <Route path="location" element={<LocationPage />} />
-          <Route></Route>
+         
         </Routes>
       </LikeContextProvider>
     </div>

@@ -1,14 +1,14 @@
-import Hello from "./hello"
+import Card from "./card"
 
 const Catalog = () => {
     return (
-        <main className="container">
-        <section className="row my-5 ">
-            <Hello></Hello>
-            <Hello></Hello>
-            <Hello></Hello>
-        </section>
-    </main>
+        <main className="container space">
+            <section className="row my-5 ">
+
+                <Card></Card>
+
+            </section>
+        </main>
     )
 }
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TodoList from "./TodoList";
+import TodoList from "./todoList";
 import index from "../index.css";
 
 const Form = () => {
